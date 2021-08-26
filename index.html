@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App By Sakib</title>
+  <link rel="icon" href="./images/logo.png" type="image/gif">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- bootstrap grid -->
+  <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+  <!-- my style -->
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="location-wrap center">
+      <div class="location center shadow radius-8 py-2 px-4 ">
+        <i class="fas fa-map-marker-alt me-2"></i>
+        <span class="location_text fw-bold"><span id="city">___</span> , <span id="country">__</span></span>
+      </div>
+    </div>
+    <div class="row g-4 mt-5">
+      <!-- img -->
+      <div class="col-12 col-sm-12 col-md-12 col-lg-5 weather-img-box center">
+        <p class="fw-bold imgLoading">Loading...</p>
+        <img src="" id="conditonal-img" alt="">
+      </div>
+      <!-- details -->
+      <div class="col-12 col-sm-12 col-md-12 col-lg-7">
+        <div class="row g-4">
+          <!-- temp -->
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 my-4">
+            <div class="temp-box shadow py-5 px-3 radius-20">
+              <h1 class="temp fw-normal mt-0 mb-3">
+                <span class="degTemp">...</span><sup>o</sup>c
+              </h1>
+              <!-- min max temp -->
+              <div class="max-min-temp center">
+                <div class="max">
+                  <i class="fas fa-arrow-up"></i>
+                  <span class="max-temp fw-normal"><span class="degMaxTemp">...</span><sup>o</sup>c</span>
+                </div>
+                <div class="min">
+                  <i class="fas fa-arrow-down"></i>
+                  <span class="min-temp fw-normal"><span class="degMinTemp">...</span><sup>o</sup>c</span>
+                </div>
+              </div>
+              <p class="feels-like fw-bold">Feels Like : <span class="feel-temp"><span
+                    class="degFellTemp">...</span><sup>o</sup>c</span></p>
+              <div class="wind-rain center">
+                <div class="wind  py-2 px-3 shadow radius-8" title="Wind Speed">
+                  <i class="fas fa-wind"></i>
+                  <span class="wind-speed fw-normal"><span class="windSpeed">..</span> <span
+                      class="unit">m/s</span></span>
+                </div>
+                <div class="rain py-2 px-3 shadow radius-8" title="Humidity">
+                  <i class="fas fa-tint"></i>
+                  <span class="min-temp fw-normal"><span class="humidity">..</span><span class="unit">%</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- time -->
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 my-4">
+            <h1 class="time fw-bold m-0 radius-15 shadow py-2 px-2">
+              <span class="h">..</span>
+              :
+              <span class="m">..</span>
+              <span class="h24 fw-normal">(24h)</span>
+            </h1>
+            <div class="row g-4 center sun-rise-set mt-4">
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="sun-rise rise-set center p-4 radius-15 shadow">
+                  <i class="fas fa-sun fa-3x"></i>
+                  <h2 class="sun-rise-time m-0 p-2 fw-bold">..:..</h2>
+                </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="sun-set rise-set center p-4 radius-15 shadow">
+                  <i class="fas fa-moon fa-3x"></i>
+                  <h2 class="sun-set-time m-0 p-2 fw-bold">..:..</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <p class="alart fw-normal p-3 radius-8 shadow">We should be aware about global warming</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============== -->
+  <script src="./app.js"></script>
+  <!-- ============== -->
+</body>
+
+</html>

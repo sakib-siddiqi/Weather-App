@@ -1,0 +1,46 @@
+
+/* locaton */
+.location {
+    display: inline-flex;
+    margin: 35px auto;
+    color: var(--text);
+}
+.location_text{
+    font-size: 24px;
+}
+.fa-map-marker-alt{
+    font-size: 24px;
+}
+/* temp */
+.temp{
+    text-align: center;
+    font-size: 64px;
+}
+.max-min-temp{
+    justify-content: space-around;
+}
+/* feels like */
+.feels-like{
+    text-align: center;
+}
+/* wind rain */
+.wind-rain{
+    justify-content: space-around;
+}
+/* time */
+.time{
+    text-align: center;
+    font-size: 46px;
+}
+.h24{
+    font-size: 18px;
+}
+.rise-set{
+    flex-direction: column;
+}
+.alart{
+    text-align: center;
+}
+.unit{
+    font-size: 10px;
+}
