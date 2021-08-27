@@ -60,6 +60,10 @@ function tempBox(res) {
 }
 // img show function
 function imgShow(res, day) {
+    let imgLoad = document.querySelectorAll(".imgLoading");
+    let lalart = document.querySelector(".lalart");
+    lalart.style.display='none';
+    imgLoad.forEach(ele =>ele.style.display='none');
     let id = res.weather[0].id;
     if (day) {
         if (id === 800) {
@@ -101,12 +105,8 @@ function imgShow(res, day) {
             imgLoad.style.color = 'red';
             imgLoad.innerText = "Failed to load Image";
         }
-        let imgLoad = document.querySelectorAll(".imgLoading");
-        let lalart = document.querySelector(".lalart");
-         lalart.style.display='none';
-        imgLoad.forEach(ele =>ele.style.display='none');
     }
-
+        
 }
 function timer(res) {
     let date = new Date(res.dt * 1000 + (res.timezone));
