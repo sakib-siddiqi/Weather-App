@@ -76,7 +76,7 @@ const imgShow = (res, day) => {
     hideAlarts();
     let id = res.weather[0].id;
     day ? conditionOfImg(id, 'd')
-    : conditionalImg(id, 'n');
+    : conditionOfImg(id, 'n');
 }
 const timer = res => {
     let date = new Date(res.dt * 1000 + (res.timezone));
@@ -102,4 +102,5 @@ async function weather(lat, lon) {
     let response = await convertingToJson;
     tempBox(response);
     timer(response);
+    console.log(response)
 }
