@@ -91,7 +91,7 @@ const timer = res => {
     let sunSetTime = new Date((res.sys.sunset) * 1000);
     sunRise.innerText = `${sunRiseTime.getHours()} : ${sunRiseTime.getMinutes()}`;
     sunSet.innerText = `${sunSetTime.getHours()} : ${sunSetTime.getMinutes()}`;
-    const dayNightResult = (res,dorN,dark)=> imgShow(res, dorN);darkTheme(dark);
+    const dayNightResult = (res , dorN , dark ) => {imgShow(res, dorN);darkTheme(dark)};
     ((sunRiseTime.getTime() < date.getTime()) && (sunSetTime.getTime() > date.getTime())) ? dayNightResult(res,true,false)
     :dayNightResult(res,false,true);
 }
