@@ -42,10 +42,10 @@ const conditionOfImg = (id, dayOrNight) => {
 }
 // hide alerts
 const hideAlarts = () =>{
+    let imgLoad = document.querySelectorAll(".imgLoading");
     let lalart = document.querySelector(".lalart");
     lalart.style.display = 'none';
     imgLoad.forEach(ele => ele.style.display = 'none');
-    let imgLoad = document.querySelectorAll(".imgLoading");
 }
 // geo location
 const successCallback = (position) => {
@@ -102,5 +102,4 @@ async function weather(lat, lon) {
     let response = await convertingToJson;
     tempBox(response);
     timer(response);
-    console.log(response)
 }
