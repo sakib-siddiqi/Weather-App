@@ -11,6 +11,7 @@ let hour = document.querySelector(".h");
 let mnt = document.querySelector(".m");
 let sunRise = document.querySelector(".sun-rise-time");
 let sunSet = document.querySelector(".sun-set-time");
+let imgLoadPera = document.querySelector(".imgLoadingPera");
 // =====================
 // dark theme
 const darkTheme = check => {
@@ -42,10 +43,8 @@ const conditionOfImg = (id, dayOrNight) => {
 }
 // hide alerts
 const hideAlarts = () =>{
-    let imgLoad = document.querySelectorAll(".imgLoading");
     let lalart = document.querySelector(".lalart");
     lalart.style.display = 'none';
-    imgLoad.forEach(ele => ele.style.display = 'none');
 }
 // geo location
 const successCallback = (position) => {
@@ -70,6 +69,7 @@ const tempBox = res => {
     feelTemp.innerText = Math.round((res.main.feels_like) - 273.16);
     windSpeed.innerText = (res.wind.speed);
     humidity.innerText = (res.main.humidity);
+    imgLoadPera.innerHTML=`${res.weather[0].main}<sub class="weat">(${res.weather[0].description})</sub>`
 }
 // img show function
 const imgShow = (res, day) => {

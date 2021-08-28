@@ -44,12 +44,17 @@
 .unit{
     font-size: 10px;
 }
-.imgLoading{
-    display: inline-block;
+.imgLoading,.imgLoadingPera{
     padding: 8px 2rem;
     background: var(--text);
     color:white;
     border-radius: 8px;
     text-align: center;
     letter-spacing: 2px;
+}
+.weather-img-box,.imgLoadingPera{
+    flex-direction: column;
+}
+.weat{
+    font-size: 12px;
 }
