@@ -69,7 +69,7 @@ const tempBox = res => {
     feelTemp.innerText = Math.round((res.main.feels_like) - 273.16);
     windSpeed.innerText = (res.wind.speed);
     humidity.innerText = (res.main.humidity);
-    imgLoadPera.innerHTML=`${res.weather[0].main}<sub class="weat">(${res.weather[0].description})</sub>`
+    imgLoadPera.innerHTML=`${res.weather[0].main}<span>${res.weather[0].description}</span>`
 }
 // img show function
 const imgShow = (res, day) => {
